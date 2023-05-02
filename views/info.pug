@@ -1,0 +1,16 @@
+html
+head
+    title Form - Freetuts.net
+    meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", rel="stylesheet")
+body
+    div.container
+        .card(style = "margin-top: 5%;")
+            h3.card-header Kết quả
+            .card-body
+                ul.list-group  
+                    li.list-group-item Họ tên:  #{body.name}
+                    li.list-group-item Tuổi:  #{body.age}
+                    li.list-group-item Giới tính #{body.gender}
+                    li.list-group-item Avatar  
+                        img(src="/uploads/" + file.filename +"", alt=file.originalname)

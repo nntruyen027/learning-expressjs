@@ -1,0 +1,26 @@
+html
+head
+    title Form - Freetuts.net
+    meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", rel="stylesheet")
+body
+    div.container
+        .card(style = "margin-top: 5%;")
+            h3.card-header Xử lý Form - Freetuts.net
+            .card-body
+                form(action="/", method="post", enctype="multipart/form-data")
+                    .form-group
+                        label(for="name") Họ và tên
+                        input.form-control(type="text", name="name", placeholder="Nguyễn Văn Trí", required)
+                    .form-group
+                        label(for="age") Tuổi
+                        input.form-control(type="number", name="age", placeholder="19", required)
+                    .form-group
+                        label(for="gender") Giới tính
+                        select.form-control(name="gender", required)
+                            option(value="Nam") Nam
+                            option(value="Nữ") Nữ
+                    .form-group
+                        label(for="avatar") Ảnh đại diện
+                        input.form-control(type="file", name="avatar", required)
+                    button.btn.btn-block.btn-success(type="submit") Gửi
